@@ -7,8 +7,8 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "engage-cook",
-  description: "built using next.js, magic-ui, and tailwindcss",
+  title: "sinbad-stock",
+  description: "Combining cutting-edge and proven technologies to build scalable, secure, and high-performance Fintech systems.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

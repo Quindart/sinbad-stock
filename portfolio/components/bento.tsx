@@ -248,7 +248,7 @@ const features = [
     description:
       "Here are a few of my recent projects, using the technologies mentioned above.",
     className: "col-span-3 md:col-span-2",
-    href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/projects`,
+    href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/project`,
     cta: "All projects",
     background: (
       <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[102%]">
@@ -287,45 +287,45 @@ const features = [
     ),
   },
 
-  {
-    Icon: "",
-    name: "Daily Visitors",
-    description:
-      "Live visitor stats for this website, powered by Umami Analytics.",
-    href: "https://umami.is",
-    cta: "Umami",
-    className: "col-span-3 md:col-span-2",
-    background: (
-      <>
-        <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[102%]">
-          <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
-            <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]"></div>
-            <div className="sm:-translate-y-5">
-              <StatsChart />
-            </div>
-          </div>
-        </div>
-      </>
-    ),
-  },
+  // {
+  //   Icon: "",
+  //   name: "Daily Visitors",
+  //   description:
+  //     "Live visitor stats for this website, powered by Umami Analytics.",
+  //   href: "https://umami.is",
+  //   cta: "Umami",
+  //   className: "col-span-3 md:col-span-2",
+  //   background: (
+  //     <>
+  //       <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[102%]">
+  //         <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
+  //           <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]"></div>
+  //           <div className="sm:-translate-y-5">
+  //             <StatsChart />
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </>
+  //   ),
+  // },
 
-  {
-    Icon: "",
-    name: "",
-    description: "",
-    className: "col-span-3 md:col-span-1",
-    href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/now`,
-    cta: "Ideas",
-    background: (
-      <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[105%]">
-        <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
-          <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]">
-            <RippleCard />
-          </div>
-        </div>
-      </div>
-    ),
-  },
+  // {
+  //   Icon: "",
+  //   name: "",
+  //   description: "",
+  //   className: "col-span-3 md:col-span-1",
+  //   href: `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/now`,
+  //   cta: "Ideas",
+  //   background: (
+  //     <div className="absolute h-full w-full left-0 top-0 origin-top rounded-md transition-all duration-300 ease-out group-hover:scale-[105%]">
+  //       <div className="absolute h-full w-full [mask-image:linear-gradient(to_top,transparent_20%,#000_70%)]">
+  //         <div className="absolute h-full w-full [mask-image:linear-gradient(to_bottom,transparent_2%,#000_10%)]">
+  //           <RippleCard />
+  //         </div>
+  //       </div>
+  //     </div>
+  //   ),
+  // },
 
   {
     Icon: "",

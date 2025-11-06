@@ -1,27 +1,36 @@
-# **Stock Analytics API**  
-**Real-time AI-Powered Stock Analysis Platform**  
+# **Stock Analytics Platform**
+**Real-time AI-Powered Stock Intelligence for Vietnam Markets**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
-[![Python 3.12](https://img.shields.io/badge/Python-3.12-blue)](https://python.org)  
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.2-brightgreen)](https://fastapi.tiangolo.com)  
-[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://docker.com)  
-
----
-
-## Overview
-
-**Stock Analytics API** is a **high-performance, AI-native backend platform** for real-time stock market intelligence in Vietnam (HOSE, HNX, UPCOM). It powers intelligent financial applications with:
-
-- **AI Chatbot (Gemini Pro)** – Natural language stock queries  
-- **Real-time Market Data** – via `vnstock`  
-- **Premium Payment Gateway** – Subscription & access control  
-- **Modular Microservices** – Scalable, future-ready architecture  
-
-> **Target Users**: Investors, traders, fintech apps, portfolio managers  
-> **Target Platforms**: Web, Mobile (React Native), Admin Dashboard  
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-blue)](https://python.org)
+[![NestJS](https://img.shields.io/badge/NestJS-11.0-red?logo=nestjs&logoColor=white)](https://nestjs.com)
+[![Vite](https://img.shields.io/badge/Vite-5.0-purple?logo=vite&logoColor=white)](https://vitejs.dev)
+[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-Modern%20UI-black?logo=react&logoColor=white)](https://ui.shadcn.com)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.2-brightgreen)](https://fastapi.tiangolo.com)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue)](https://docker.com)
 
 ---
 
+##  Overview
+
+**Stock Analytics Platform** is a **real-time, AI-native financial analytics ecosystem** for Vietnam’s stock exchanges (HOSE, HNX, UPCOM).  
+It combines **AI + market data + modular microservices** for traders, analysts, and fintech developers.
+
+> **Tech Stack:**  
+>  AI Chatbot (Gemini Pro) · ⚙️ NestJS Microservices · 📊 FastAPI Analytics Engine · 💸 Payment Gateway · 🎨 Vite + shadcn/ui Frontend
+
+---
+
+## Features
+
+-  **AI Chatbot (Gemini Pro)** — Natural language understanding for VN stocks  
+- ⚡ **Real-time Market Data** — Integrated via [`vnstock`](https://pypi.org/project/vnstock/)  
+-  **Technical & Fundamental Analysis Engine** — Powered by FastAPI  
+- **Premium Access System** — Subscription-based via Payment microservice  
+-  **Modular Microservices** — Scalable NestJS architecture  
+-  **Modern Frontend** — Vite + React + shadcn/ui with dark/light theme  
+
+---
 ## Services
 
 | Service | Description | Status |

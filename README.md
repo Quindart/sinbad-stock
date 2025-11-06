@@ -17,7 +17,7 @@
 It combines **AI + market data + modular microservices** for traders, analysts, and fintech developers.
 
 > **Tech Stack:**  
->  AI Chatbot (Gemini Pro) · ⚙️ NestJS Microservices · 📊 FastAPI Analytics Engine · 💸 Payment Gateway · 🎨 Vite + shadcn/ui Frontend
+>  AI Chatbot (Gemini Pro) ·  NestJS Microservices ·  FastAPI Analytics Engine ·  Payment Gateway · Vite + shadcn/ui Frontend
 
 ---
 

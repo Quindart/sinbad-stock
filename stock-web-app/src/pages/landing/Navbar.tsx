@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 import {
   Sheet,
@@ -6,13 +6,17 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet';
 
-import { GithubIcon, Menu } from "lucide-react";
-import { LogoIcon } from "./Icons";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
-import { buttonVariants } from "@/components/ui/button";
-import { ModeToggle } from "@/components/common/mode-toggle";
+import { GithubIcon, Menu } from 'lucide-react';
+import { LogoIcon } from './Icons';
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from '@/components/ui/navigation-menu';
+import { buttonVariants } from '@/components/ui/button';
+import { ModeToggle } from '@/components/common/mode-toggle';
 
 interface RouteProps {
   href: string;
@@ -21,34 +25,34 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
+    href: '#features',
+    label: 'Features',
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: '#testimonials',
+    label: 'Testimonials',
   },
   {
-    href: "#pricing",
-    label: "Pricing",
+    href: '#pricing',
+    label: 'Pricing',
   },
   {
-    href: "#faq",
-    label: "FAQ",
+    href: '#faq',
+    label: 'FAQ',
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header className="dark:bg-background sticky top-0 z-40 w-full border-b-[1px] bg-white dark:border-b-slate-700">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
-          <NavigationMenuItem className="font-bold flex">
+        <NavigationMenuList className="container flex h-14 w-screen justify-between px-4">
+          <NavigationMenuItem className="flex font-bold">
             <a
               rel="noreferrer noopener"
               href="/"
-              className="ml-2 font-bold text-xl flex"
+              className="ml-2 flex text-xl font-bold"
             >
               <LogoIcon />
               ShadcnUI/React
@@ -60,33 +64,30 @@ export const Navbar = () => {
           <span className="flex md:hidden">
             <ModeToggle />
 
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
                 <Menu
-                  className="flex md:hidden h-5 w-5"
+                  className="flex h-5 w-5 md:hidden"
                   onClick={() => setIsOpen(true)}
                 >
                   <span className="sr-only">Menu Icon</span>
                 </Menu>
               </SheetTrigger>
 
-              <SheetContent side={"left"}>
+              <SheetContent side={'left'}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
+                  <SheetTitle className="text-xl font-bold">
                     Shadcn/React
                   </SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+                <nav className="mt-4 flex flex-col items-center justify-center gap-2">
                   {routeList.map(({ href, label }: RouteProps) => (
                     <a
                       rel="noreferrer noopener"
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
+                      className={buttonVariants({ variant: 'ghost' })}
                     >
                       {label}
                     </a>
@@ -96,10 +97,10 @@ export const Navbar = () => {
                     href="https://github.com/leoMirandaa/shadcn-landing-page.git"
                     target="_blank"
                     className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
+                      variant: 'secondary',
                     })}`}
                   >
-                    <GithubIcon className="mr-2 w-5 h-5" />
+                    <GithubIcon className="mr-2 h-5 w-5" />
                     Github
                   </a>
                 </nav>
@@ -108,14 +109,14 @@ export const Navbar = () => {
           </span>
 
           {/* desktop */}
-          <nav className="hidden md:flex gap-2">
+          <nav className="hidden gap-2 md:flex">
             {routeList.map((route: RouteProps, i) => (
               <a
                 rel="noreferrer noopener"
                 href={route.href}
                 key={i}
                 className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
+                  variant: 'ghost',
                 })}`}
               >
                 {route.label}
@@ -123,14 +124,14 @@ export const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
+          <div className="hidden gap-2 md:flex">
             <a
               rel="noreferrer noopener"
               href="https://github.com/leoMirandaa/shadcn-landing-page.git"
               target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
+              className={`border ${buttonVariants({ variant: 'secondary' })}`}
             >
-              <GithubIcon className="mr-2 w-5 h-5" />
+              <GithubIcon className="mr-2 h-5 w-5" />
               Github
             </a>
             <ModeToggle />

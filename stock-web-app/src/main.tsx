@@ -19,7 +19,7 @@ if (!rootElement.innerHTML) {
   root.render(
     <React.StrictMode>
       <ThemeProvider>
-      <App />
+        <App />
       </ThemeProvider>
     </React.StrictMode>,
   );

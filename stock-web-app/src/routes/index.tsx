@@ -1,4 +1,3 @@
-
 import { About } from '@/pages/landing/About';
 import { Cta } from '@/pages/landing/Cta';
 import { FAQ } from '@/pages/landing/FAQ';
@@ -22,8 +21,8 @@ export const Route = createFileRoute('/')({
 
 function HomeComponent() {
   return (
-    <div className='mx-auto max-w-[1480px]'>  
-         <Navbar />
+    <div className="mx-auto max-w-[1480px]">
+      <Navbar />
       <Hero />
       <Sponsors />
       <About />

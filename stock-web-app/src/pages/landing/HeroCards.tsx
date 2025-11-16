@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -6,23 +6,20 @@ import {
   CardHeader,
   CardTitle,
   CardFooter,
-} from "@/components/ui/card";
-import { Check, Github, Linkedin } from "lucide-react";
-import { LightBulbIcon } from "./Icons";
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
-import { Badge } from "@/components/ui/badge";
+} from '@/components/ui/card';
+import { Check, Github, Linkedin } from 'lucide-react';
+import { LightBulbIcon } from './Icons';
+import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar';
+import { Badge } from '@/components/ui/badge';
 
 export const HeroCards = () => {
   return (
-    <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
+    <div className="relative hidden h-[500px] w-[700px] flex-row flex-wrap gap-8 lg:flex">
       {/* Testimonial */}
-      <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute -top-[15px] w-[340px] shadow-black/10 drop-shadow-xl dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <AvatarImage
-              alt=""
-              src="https://github.com/shadcn.png"
-            />
+            <AvatarImage alt="" src="https://github.com/shadcn.png" />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
 
@@ -36,20 +33,20 @@ export const HeroCards = () => {
       </Card>
 
       {/* Team */}
-      <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
-        <CardHeader className="mt-8 flex justify-center items-center pb-2">
+      <Card className="absolute top-4 right-[20px] flex w-80 flex-col items-center justify-center shadow-black/10 drop-shadow-xl dark:shadow-white/10">
+        <CardHeader className="mt-8 flex items-center justify-center pb-2">
           <img
             src="https://i.pravatar.cc/150?img=58"
             alt="user avatar"
-            className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
+            className="absolute -top-12 aspect-square h-24 w-24 rounded-full object-cover grayscale-[0%]"
           />
           <CardTitle className="text-center">Leo Miranda</CardTitle>
-          <CardDescription className="font-normal text-primary">
+          <CardDescription className="text-primary font-normal">
             Frontend Developer
           </CardDescription>
         </CardHeader>
 
-        <CardContent className="text-center pb-2">
+        <CardContent className="pb-2 text-center">
           <p>
             I really enjoy transforming ideas into functional software that
             exceeds expectations
@@ -63,20 +60,20 @@ export const HeroCards = () => {
               href="https://github.com/leoMirandaa"
               target="_blank"
               className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
+                variant: 'ghost',
+                size: 'sm',
               })}
             >
               <span className="sr-only">Github icon</span>
-              <Github className="w-5 h-5" />
+              <Github className="h-5 w-5" />
             </a>
             <a
               rel="noreferrer noopener"
               href="https://twitter.com/leo_mirand4"
               target="_blank"
               className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
+                variant: 'ghost',
+                size: 'sm',
               })}
             >
               <span className="sr-only">X icon</span>
@@ -84,7 +81,7 @@ export const HeroCards = () => {
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                className="fill-foreground w-5 h-5"
+                className="fill-foreground h-5 w-5"
               >
                 <title>X</title>
                 <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
@@ -96,8 +93,8 @@ export const HeroCards = () => {
               href="https://www.linkedin.com/in/leopoldo-miranda/"
               target="_blank"
               className={buttonVariants({
-                variant: "ghost",
-                size: "sm",
+                variant: 'ghost',
+                size: 'sm',
               })}
             >
               <span className="sr-only">Linkedin icon</span>
@@ -108,14 +105,11 @@ export const HeroCards = () => {
       </Card>
 
       {/* Pricing */}
-      <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute top-[150px] left-[50px] w-72 shadow-black/10 drop-shadow-xl dark:shadow-white/10">
         <CardHeader>
-          <CardTitle className="flex item-center justify-between">
+          <CardTitle className="item-center flex justify-between">
             Free
-            <Badge
-              variant="secondary"
-              className="text-sm text-primary"
-            >
+            <Badge variant="secondary" className="text-primary text-sm">
               Most popular
             </Badge>
           </CardTitle>
@@ -133,29 +127,26 @@ export const HeroCards = () => {
           <Button className="w-full">Start Free Trial</Button>
         </CardContent>
 
-        <hr className="w-4/5 m-auto mb-4" />
+        <hr className="m-auto mb-4 w-4/5" />
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["4 Team member", "4 GB Storage", "Upto 6 pages"].map(
+            {['4 Team member', '4 GB Storage', 'Upto 6 pages'].map(
               (benefit: string) => (
-                <span
-                  key={benefit}
-                  className="flex"
-                >
-                  <Check className="text-green-500" />{" "}
+                <span key={benefit} className="flex">
+                  <Check className="text-green-500" />{' '}
                   <h3 className="ml-2">{benefit}</h3>
                 </span>
-              )
+              ),
             )}
           </div>
         </CardFooter>
       </Card>
 
       {/* Service */}
-      <Card className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
-        <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-          <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
+      <Card className="absolute -right-[10px] bottom-[35px] w-[350px] shadow-black/10 drop-shadow-xl dark:shadow-white/10">
+        <CardHeader className="flex items-start justify-start gap-4 space-y-1 md:flex-row">
+          <div className="bg-primary/20 mt-1 rounded-2xl p-1">
             <LightBulbIcon />
           </div>
           <div>

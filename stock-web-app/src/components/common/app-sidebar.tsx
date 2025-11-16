@@ -6,9 +6,6 @@ import {
   Inbox,
   Search,
   Settings,
-  Sparkles,
-  Bot,
-  Image,
 } from 'lucide-react';
 
 import {
@@ -77,9 +74,17 @@ export function AppSidebar() {
                 <SidebarMenuButton className="w-full justify-between">
                   <div className="flex items-center gap-2">
                     {selectedModel === 'GPT-4.0' ? (
-                      <img className='size-5' alt='gpt-icon-quindart' src='/assets/icons/chatgpt-icon.png'/>
+                      <img
+                        className="size-5"
+                        alt="gpt-icon-quindart"
+                        src="/assets/icons/chatgpt-icon.png"
+                      />
                     ) : (
-                      <img className='size-5' alt='gemini-icon-quindart' src='/assets/icons/gemini-icon.png'/>
+                      <img
+                        className="size-5"
+                        alt="gemini-icon-quindart"
+                        src="/assets/icons/gemini-icon.png"
+                      />
                     )}
                     <span className="text-[16px] font-medium text-slate-600">
                       {selectedModel}
@@ -100,8 +105,12 @@ export function AppSidebar() {
                         : '',
                     )}
                   >
-                     <img className='size-5' alt='gpt-icon-quindart' src={model.icon}/>
-                  
+                    <img
+                      className="size-5"
+                      alt="gpt-icon-quindart"
+                      src={model.icon}
+                    />
+
                     <span className="text-[16px] font-medium text-slate-600">
                       {model.name}
                     </span>

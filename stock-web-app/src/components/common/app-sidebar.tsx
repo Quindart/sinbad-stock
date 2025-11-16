@@ -8,6 +8,7 @@ import {
   Settings,
   Sparkles,
   Bot,
+  Image,
 } from 'lucide-react';
 
 import {
@@ -62,8 +63,8 @@ export function AppSidebar() {
   const [selectedModel, setSelectedModel] = useState('GPT-4.0');
 
   const models = [
-    { name: 'GPT-4.0', icon: Sparkles },
-    { name: 'Gemini 2.0', icon: Bot },
+    { name: 'GPT-4.0', icon: '/assets/icons/chatgpt-icon.png' },
+    { name: 'Gemini 2.0', icon: '/assets/icons/gemini-icon.png' },
   ];
 
   return (
@@ -76,9 +77,9 @@ export function AppSidebar() {
                 <SidebarMenuButton className="w-full justify-between">
                   <div className="flex items-center gap-2">
                     {selectedModel === 'GPT-4.0' ? (
-                      <Sparkles className="size-6 text-purple-500" />
+                      <img className='size-5' alt='gpt-icon-quindart' src='/assets/icons/chatgpt-icon.png'/>
                     ) : (
-                      <Bot className="size-6 text-blue-500" />
+                      <img className='size-5' alt='gemini-icon-quindart' src='/assets/icons/gemini-icon.png'/>
                     )}
                     <span className="text-[16px] font-medium text-slate-600">
                       {selectedModel}
@@ -99,14 +100,8 @@ export function AppSidebar() {
                         : '',
                     )}
                   >
-                    <model.icon
-                      className={cn(
-                        'size-6',
-                        model.name === 'GPT-4.0'
-                          ? 'text-purple-500'
-                          : 'text-blue-500',
-                      )}
-                    />
+                     <img className='size-5' alt='gpt-icon-quindart' src={model.icon}/>
+                  
                     <span className="text-[16px] font-medium text-slate-600">
                       {model.name}
                     </span>

@@ -1,7 +1,11 @@
 import { AppSidebar } from '@/components/common/app-sidebar';
 import { SidebarProvider } from '@/components/ui/sidebar';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <SidebarProvider>
       <AppSidebar />

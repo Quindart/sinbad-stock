@@ -1,6 +1,6 @@
 import { Button, buttonVariants } from '@/components/ui/button';
 import { HeroCards } from './HeroCards';
-import { Github, Linkedin } from 'lucide-react';
+import {  Linkedin } from 'lucide-react';
 
 export const Hero = () => {
   return (

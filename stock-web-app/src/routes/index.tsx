@@ -11,7 +11,6 @@ import { Pricing } from '@/pages/landing/Pricing';
 import { ScrollToTop } from '@/pages/landing/ScrollToTop';
 import { Services } from '@/pages/landing/Services';
 import { Sponsors } from '@/pages/landing/Sponsors';
-import { Team } from '@/pages/landing/Team';
 import { Testimonials } from '@/pages/landing/Testimonials';
 import { createFileRoute } from '@tanstack/react-router';
 import { motion } from 'framer-motion';

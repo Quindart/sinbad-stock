@@ -116,7 +116,7 @@ export const Pricing = () => {
             <CardContent className="flex-grow mt-2">
               <Button
                 className={buttonVariants({
-                  variant: 'light',
+                  variant: 'default',
                   size: 'lg', // tăng kích thước button
                   className: 'shadow-md hover:shadow-lg transition-shadow duration-300', // shadow sáng
                 })}

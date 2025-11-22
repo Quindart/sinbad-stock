@@ -8,7 +8,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 
-import { GithubIcon, LogIn, LogInIcon, Menu } from 'lucide-react';
+import {  LogIn, LogInIcon, Menu } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuItem,

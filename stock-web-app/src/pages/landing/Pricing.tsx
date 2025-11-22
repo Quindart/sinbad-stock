@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -30,14 +30,14 @@ const pricingList: PricingProps[] = [
     popular: 0,
     price: 0,
     description:
-      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
+      'Start managing your personal finances with AI-powered budgeting tools.',
     buttonText: 'Get Started',
     benefitList: [
-      '1 Team member',
-      '2 GB Storage',
-      'Upto 4 pages',
+      'Track daily expenses',
+      'View spending trends',
+      'Set simple financial goals',
+      'Basic AI recommendations',
       'Community support',
-      'lorem ipsum dolor',
     ],
   },
   {
@@ -45,14 +45,14 @@ const pricingList: PricingProps[] = [
     popular: 1,
     price: 5,
     description:
-      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
+      'Unlock advanced analytics and portfolio tracking for smarter financial decisions.',
     buttonText: 'Start Free Trial',
     benefitList: [
-      '4 Team member',
-      '4 GB Storage',
-      'Upto 6 pages',
+      'Multiple account integration',
+      'Advanced spending insights',
+      'Automated saving suggestions',
+      'Investment tracking & alerts',
       'Priority support',
-      'lorem ipsum dolor',
     ],
   },
   {
@@ -60,21 +60,21 @@ const pricingList: PricingProps[] = [
     popular: 0,
     price: 40,
     description:
-      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
-    buttonText: 'Contact US',
+      'Full suite of AI-powered financial tools for teams and organizations.',
+    buttonText: 'Contact Us',
     benefitList: [
-      '10 Team member',
-      '8 GB Storage',
-      'Upto 10 pages',
-      'Priority support',
-      'lorem ipsum dolor',
+      'Team budget management',
+      'Custom reports & analytics',
+      'Portfolio performance dashboards',
+      'Dedicated account manager',
+      '24/7 priority support',
     ],
   },
 ];
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="container py-24 sm:py-32">
+    <section id="pricing" className="container py-24 px-6 lg:px-0 sm:py-32">
       <h2 className="text-center text-3xl font-bold md:text-4xl">
         Get
         <span className="from-primary/60 to-primary bg-gradient-to-b bg-clip-text text-transparent">
@@ -84,20 +84,20 @@ export const Pricing = () => {
         Access
       </h2>
       <h3 className="text-muted-foreground pt-4 pb-8 text-center text-xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Manage your finances with smart AI insights and personal investment tools.
       </h3>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
-            className={
+            className={`flex flex-col h-full transition-transform duration-300 hover:scale-105 hover:shadow-xl ${
               pricing.popular === PopularPlanType.YES
                 ? 'shadow-black/10 drop-shadow-xl dark:shadow-white/10'
                 : ''
-            }
+            }`}
           >
-            <CardHeader>
+            <CardHeader className="flex flex-col flex-grow">
               <CardTitle className="item-center flex justify-between">
                 {pricing.title}
                 {pricing.popular === PopularPlanType.YES ? (
@@ -106,26 +106,32 @@ export const Pricing = () => {
                   </Badge>
                 ) : null}
               </CardTitle>
-              <div>
+              <div className="mt-2">
                 <span className="text-3xl font-bold">${pricing.price}</span>
                 <span className="text-muted-foreground"> /month</span>
               </div>
-
-              <CardDescription>{pricing.description}</CardDescription>
+              <CardDescription className="mt-2">{pricing.description}</CardDescription>
             </CardHeader>
 
-            <CardContent>
-              <Button className="w-full">{pricing.buttonText}</Button>
+            <CardContent className="flex-grow mt-2">
+              <Button
+                className={buttonVariants({
+                  variant: 'light',
+                  size: 'lg', // tăng kích thước button
+                  className: 'shadow-md hover:shadow-lg transition-shadow duration-300', // shadow sáng
+                })}
+              >
+                {pricing.buttonText}
+              </Button>
             </CardContent>
 
-            <hr className="m-auto mb-4 w-4/5" />
-
-            <CardFooter className="flex">
-              <div className="space-y-4">
+            <hr className="m-auto mb-2 w-4/5" />
+            <CardFooter className="flex flex-col flex-grow">
+              <div className="space-y-3 mt-2">
                 {pricing.benefitList.map((benefit: string) => (
                   <span key={benefit} className="flex">
                     <Check className="text-green-500" />{' '}
-                    <h3 className="ml-2">{benefit}</h3>
+                    <h3 className="ml-2 text-sm">{benefit}</h3>
                   </span>
                 ))}
               </div>

@@ -8,8 +8,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 
-import { GithubIcon, Menu } from 'lucide-react';
-import { LogoIcon } from './Icons';
+import { GithubIcon, LogIn, LogInIcon, Menu } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -17,6 +16,8 @@ import {
 } from '@/components/ui/navigation-menu';
 import { buttonVariants } from '@/components/ui/button';
 import { ModeToggle } from '@/components/common/mode-toggle';
+import { Link } from '@tanstack/react-router';
+import LogoBot from '@/components/common/logo';
 
 interface RouteProps {
   href: string;
@@ -48,15 +49,16 @@ export const Navbar = () => {
     <header className="dark:bg-background sticky top-0 z-40 w-full border-b-[1px] bg-white dark:border-b-slate-700">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container flex h-14 w-screen justify-between px-4">
-          <NavigationMenuItem className="flex font-bold">
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="ml-2 flex text-xl font-bold"
+          <NavigationMenuItem className="flex items-center justify-center font-bold">
+            <Link
+              to='/'
+            className="ml-2 flex text-xl items-center justify-center gap-2 font-bold"
             >
-              <LogoIcon />
-              ShadcnUI/React
-            </a>
+              <LogoBot className='rounded-xl'/>
+              <h1>
+              Sinbad Stock
+              </h1>
+            </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -77,7 +79,7 @@ export const Navbar = () => {
               <SheetContent side={'left'}>
                 <SheetHeader>
                   <SheetTitle className="text-xl font-bold">
-                    Shadcn/React
+                   Sinbad stock
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="mt-4 flex flex-col items-center justify-center gap-2">
@@ -94,14 +96,13 @@ export const Navbar = () => {
                   ))}
                   <a
                     rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-                    target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
+                    href="/login"
+                    className={`w-full mx-10 border ${buttonVariants({
                       variant: 'secondary',
                     })}`}
                   >
-                    <GithubIcon className="mr-2 h-5 w-5" />
-                    Github
+                    Login
+                    <LogInIcon className="mr-2 h-5 w-5" />
                   </a>
                 </nav>
               </SheetContent>
@@ -125,15 +126,13 @@ export const Navbar = () => {
           </nav>
 
           <div className="hidden gap-2 md:flex">
-            <a
-              rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-              target="_blank"
+            <Link
+              to="/login"
               className={`border ${buttonVariants({ variant: 'secondary' })}`}
             >
-              <GithubIcon className="mr-2 h-5 w-5" />
-              Github
-            </a>
+              <LogIn className="mr-2 h-5 w-5" />
+              Login
+            </Link>
             <ModeToggle />
           </div>
         </NavigationMenuList>

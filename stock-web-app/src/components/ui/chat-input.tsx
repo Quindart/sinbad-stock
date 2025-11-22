@@ -40,7 +40,7 @@ export function ChatInput({
           type="button"
           onClick={onStop}
           variant="destructive"
-          className="rounded-circle!"
+        className="rounded-[50%]! shadow-2xl!"
           size="xl"
         >
           <Square className="size-6" />

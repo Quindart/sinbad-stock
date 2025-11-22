@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@radix-ui/react-accordion';
+} from '@/components/ui/accordion';
 
 interface FAQProps {
   question: string;
@@ -13,40 +13,38 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: 'Is this template free?',
-    answer: 'Yes. It is a free ChadcnUI template.',
+    question: 'Is this platform free?',
+    answer: 'Yes, our basic stock tracking and personal asset management features are free. Premium subscriptions unlock advanced analytics and tools.',
     value: 'item-1',
   },
   {
-    question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit?',
+    question: 'How do I track my stocks and investments?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.',
+      'Simply add your stock tickers to your dashboard, and our platform will provide real-time updates, performance charts, and market insights.',
     value: 'item-2',
   },
   {
-    question:
-      'Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?',
+    question: 'Can I manage personal assets like real estate or savings?',
     answer:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?',
+      'Absolutely! Our interface allows you to track various personal assets including real estate, savings accounts, cryptocurrencies, and more, all in one place.',
     value: 'item-3',
   },
   {
-    question: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit?',
-    answer: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+    question: 'What kind of market insights do you provide?',
+    answer: 'We offer daily market trends, stock analysis, financial news summaries, and personalized recommendations based on your portfolio.',
     value: 'item-4',
   },
   {
-    question:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?',
+    question: 'How secure is my financial data?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.',
+      'We prioritize security with end-to-end encryption, two-factor authentication, and compliance with industry standards to protect your data.',
     value: 'item-5',
   },
 ];
 
 export const FAQ = () => {
   return (
-    <section id="faq" className="container py-24 sm:py-32">
+    <section id="faq" className="container py-24 px-6 lg:px-0 sm:py-32">
       <h2 className="mb-4 text-3xl font-bold md:text-4xl">
         Frequently Asked{' '}
         <span className="from-primary/60 to-primary bg-gradient-to-b bg-clip-text text-transparent">
@@ -54,7 +52,7 @@ export const FAQ = () => {
         </span>
       </h2>
 
-      <Accordion type="single" collapsible className="AccordionRoot w-full">
+      <Accordion type="single" collapsible className="w-full">
         {FAQList.map(({ question, answer, value }: FAQProps) => (
           <AccordionItem key={value} value={value}>
             <AccordionTrigger className="text-left">

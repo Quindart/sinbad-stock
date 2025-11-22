@@ -17,65 +17,61 @@ interface TestimonialProps {
 const testimonials: TestimonialProps[] = [
   {
     image: 'https://github.com/shadcn.png',
-    name: 'John Doe React',
-    userName: '@john_Doe',
-    comment: 'This landing page is awesome!',
+    name: 'Alice Johnson',
+    userName: '@alice_j',
+    comment: 'This AI chatbot has completely transformed how I manage my personal finances!',
   },
   {
     image: 'https://github.com/shadcn.png',
-    name: 'John Doe React',
-    userName: '@john_Doe1',
+    name: 'Michael Smith',
+    userName: '@michael_s',
     comment:
-      'Lorem ipsum dolor sit amet,empor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.',
-  },
-
-  {
-    image: 'https://github.com/shadcn.png',
-    name: 'John Doe React',
-    userName: '@john_Doe2',
-    comment:
-      'Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+      'I love how it tracks my expenses and gives actionable insights to optimize my spending.',
   },
   {
     image: 'https://github.com/shadcn.png',
-    name: 'John Doe React',
-    userName: '@john_Doe3',
+    name: 'Emma Williams',
+    userName: '@emma_w',
     comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      'Investing has never been easier. The chatbot helps me monitor my portfolio and reminds me of key market updates.',
   },
   {
     image: 'https://github.com/shadcn.png',
-    name: 'John Doe React',
-    userName: '@john_Doe4',
+    name: 'David Lee',
+    userName: '@david_l',
     comment:
-      'Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud.',
+      'The personal finance suggestions are spot on. I finally feel in control of my money!',
   },
   {
     image: 'https://github.com/shadcn.png',
-    name: 'John Doe React',
-    userName: '@john_Doe5',
+    name: 'Sophia Brown',
+    userName: '@sophia_b',
     comment:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'The AI-driven tips and daily spending insights make budgeting simple and effective.',
+  },
+  {
+    image: 'https://github.com/shadcn.png',
+    name: 'James Taylor',
+    userName: '@james_t',
+    comment:
+      'Highly recommend this chatbot for anyone looking to improve their financial habits and investments.',
   },
 ];
 
 export const Testimonials = () => {
   return (
-    <section id="testimonials" className="container py-24 sm:py-32">
+    <section id="testimonials" className="container px-6 lg:px-0 py-24 sm:py-32">
       <h2 className="text-3xl font-bold md:text-4xl">
         Discover Why
-        <span className="from-primary/60 to-primary bg-gradient-to-b bg-clip-text text-transparent">
+        <span className="from-primary/60 to-primary bg-linear-to-b bg-clip-text text-transparent">
           {' '}
           People Love{' '}
         </span>
-        This Landing Page
+        Our Chatbot
       </h2>
-
       <p className="text-muted-foreground pt-4 pb-8 text-xl">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
+        Real users share how our AI-powered personal finance assistant helped them track spending, invest wisely, and achieve financial goals.
       </p>
-
       <div className="mx-auto grid columns-2 space-y-4 sm:block md:grid-cols-2 lg:columns-3 lg:grid-cols-4 lg:gap-6 lg:space-y-6">
         {testimonials.map(
           ({ image, name, userName, comment }: TestimonialProps) => (

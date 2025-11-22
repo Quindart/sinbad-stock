@@ -17,14 +17,14 @@ export const About = () => {
                 <span className="from-primary/60 to-primary bg-gradient-to-b bg-clip-text text-transparent">
                   About{' '}
                 </span>
-                Company
+                Chatbot
               </h2>
               <p className="text-muted-foreground mt-4 text-xl">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                Sinbad Trading AI is an intelligent financial assistant designed to help users 
+                manage personal budgets, analyze spending habits, and make smarter stock 
+                investment decisions. With real-time insights, portfolio tracking, and 
+                AI-powered market analysis, our chatbot simplifies the way you approach 
+                finance and trading.  
               </p>
             </div>
 

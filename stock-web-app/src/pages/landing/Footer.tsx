@@ -1,19 +1,16 @@
-import { LogoIcon } from './Icons';
 
 export const Footer = () => {
   return (
-    <footer id="footer">
+    <footer id="footer" className='px-6 lg:px-0'>
       <hr className="mx-auto w-11/12" />
-
       <section className="container grid grid-cols-2 gap-x-12 gap-y-8 py-20 md:grid-cols-4 xl:grid-cols-6">
-        <div className="col-span-full xl:col-span-2">
+        <div className="col-span-full  xl:col-span-2">
           <a
             rel="noreferrer noopener"
             href="/"
-            className="flex text-xl font-bold"
+            className="flex text-3xl text-primary flex items-center gap-2 font-bold"
           >
-            <LogoIcon />
-            ShadcnUI/React
+            Sinbad stock
           </a>
         </div>
 
@@ -22,7 +19,7 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://github.com/Quindart"
               className="opacity-60 hover:opacity-100"
             >
               Github
@@ -32,10 +29,10 @@ export const Footer = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://www.linkedin.com/in/minh-quang-le-76410730a/"
               className="opacity-60 hover:opacity-100"
             >
-              Twitter
+              Linkedin
             </a>
           </div>
 
@@ -45,7 +42,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Dribbble
+              Email
             </a>
           </div>
         </div>
@@ -152,14 +149,14 @@ export const Footer = () => {
 
       <section className="container pb-14 text-center">
         <h3>
-          &copy; 2024 Landing page made by{' '}
+          &copy; 2025 Sinbad stock made by{' '}
           <a
             rel="noreferrer noopener"
             target="_blank"
-            href="https://www.linkedin.com/in/leopoldo-miranda/"
+            href="https://www.linkedin.com/in/minh-quang-le-76410730a/"
             className="text-primary border-primary transition-all hover:border-b-2"
           >
-            Leo Miranda
+            Quang le
           </a>
         </h3>
       </section>

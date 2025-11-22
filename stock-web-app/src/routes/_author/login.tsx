@@ -23,7 +23,6 @@ import { LoginSchema } from '@/validationSchemas/login';
 import { sleep } from '@/utils';
 import { useAuth } from '@/auth';
 import { useState } from 'react';
-
 const fallback = '/dashboard' as const;
 
 export const Route = createFileRoute('/_author/login')({
@@ -57,7 +56,6 @@ function LoginComponent() {
     setIsSubmitting(true);
     try {
       const fieldValue = values.email;
-
       if (!fieldValue) return;
       const username = fieldValue.toString();
       await auth.login(username);
@@ -73,15 +71,24 @@ function LoginComponent() {
   const isLoggingIn = isLoading || isSubmitting;
   console.log('🚀 ~ LoginComponent ~ isLoggingIn:', isLoggingIn);
   return (
-    <div className="w-full max-w-sm">
+  <div className="flex w-full h-screen bg-background overflow-hidden">
+    {/* LEFT: LOGIN FORM */}
+    <section className="w-full max-w-md mx-auto my-auto p-6">
       <Form {...form}>
-        <form className="space-y-4" onSubmit={form.handleSubmit(onFormSubmit)}>
-          <div className="space-y-2 text-center">
-            <h1 className="text-2xl font-bold">Welcome back</h1>
+        <form
+          className="space-y-5 bg-card p-6 rounded-xl shadow-lg border border-border"
+          onSubmit={form.handleSubmit(onFormSubmit)}
+        >
+          <div className="space-y-1 text-center mb-2">
+            <h1 className="text-3xl font-bold text-primary tracking-tight">
+              Welcome back
+            </h1>
             <p className="text-muted-foreground text-sm">
               Enter your credentials to access your account
             </p>
           </div>
+
+          {/* EMAIL */}
           <FormField
             control={form.control}
             name="email"
@@ -90,7 +97,7 @@ function LoginComponent() {
                 <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input
-                    className="bg-background"
+                    className="bg-background border-border focus-visible:ring-primary"
                     placeholder="you@example.com"
                     type="email"
                     {...field}
@@ -100,6 +107,8 @@ function LoginComponent() {
               </FormItem>
             )}
           />
+
+          {/* PASSWORD */}
           <FormField
             control={form.control}
             name="password"
@@ -108,7 +117,7 @@ function LoginComponent() {
                 <div className="flex items-center justify-between">
                   <FormLabel>Password</FormLabel>
                   <a
-                    className="text-muted-foreground text-sm hover:underline"
+                    className="text-sm text-primary hover:underline"
                     href="#"
                   >
                     Forgot password?
@@ -116,7 +125,7 @@ function LoginComponent() {
                 </div>
                 <FormControl>
                   <Input
-                    className="bg-background"
+                    className="bg-background border-border focus-visible:ring-primary"
                     placeholder="Enter your password"
                     type="password"
                     {...field}
@@ -126,17 +135,50 @@ function LoginComponent() {
               </FormItem>
             )}
           />
-          <Button className="w-full" type="submit">
+
+          {/* SUBMIT BUTTON */}
+          <Button
+            className="w-full py-2.5 text-base font-medium shadow-md shadow-primary/30 
+            hover:shadow-lg hover:shadow-primary/40 transition-all duration-200"
+            type="submit"
+          >
             Sign In
           </Button>
-          <p className="text-muted-foreground text-center text-sm">
-            Don't have an account?{' '}
-            <a className="hover:underline" href="#">
+
+          <p className="text-center text-sm text-muted-foreground">
+            Don’t have an account?{' '}
+            <a className="text-primary hover:underline" href="#">
               Sign up
             </a>
           </p>
         </form>
       </Form>
-    </div>
-  );
+    </section>
+
+    {/* RIGHT: IMAGE */}
+    <aside className="flex-1 relative hidden md:block">
+      <img
+        width={1400}
+        height={'100%'}
+        className="h-full w-full object-cover opacity-70"
+        src="assets/bg-login.webp"
+        alt="stock-quindart-login-bg"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+
+      {/* CENTER TEXT */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+        text-center px-6 py-4 rounded-xl backdrop-blur-md bg-black/30 
+        border border-white/20 shadow-xl">
+        <h1 className="font-bold text-4xl text-orange-200 drop-shadow-lg">
+          Build Yourself
+        </h1>
+        <p className="text-orange-100/90 mt-2 text-sm">
+          This helps you grow yourself and elevate your financial vibe.
+        </p>
+      </div>
+    </aside>
+  </div>
+);
+
 }

@@ -13,33 +13,32 @@ interface ServiceProps {
   description: string;
   icon: JSX.Element;
 }
-
 const serviceList: ServiceProps[] = [
   {
-    title: 'Code Collaboration',
+    title: 'Smart Budgeting',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.',
+      'Track your daily spending, set financial goals, and receive AI-powered suggestions to optimize your personal budget.',
     icon: <ChartIcon />,
   },
   {
-    title: 'Project Management',
+    title: 'Financial Planning',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.',
+      'Analyze your income, expenses, and saving habits to build a personalized roadmap toward long-term financial stability.',
     icon: <WalletIcon />,
   },
   {
-    title: 'Task Automation',
+    title: 'Automated Insights',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.',
+      'Let the system automatically detect unusual transactions, categorize expenses, and notify you about important financial updates.',
     icon: <MagnifierIcon />,
   },
 ];
 
 export const Services = () => {
   return (
-    <section className="container py-24 sm:py-32">
-      <div className="grid place-items-center gap-8 lg:grid-cols-[1fr,1fr]">
-        <div>
+    <section className="container py-10 sm:py-20 px-6">
+     <div className="grid place-items-center gap-2 lg:grid-cols-[1fr_1fr]">
+        <div className="w-full">
           <h2 className="text-3xl font-bold md:text-4xl">
             <span className="from-primary/60 to-primary bg-gradient-to-b bg-clip-text text-transparent">
               Client-Centric{' '}
@@ -70,7 +69,6 @@ export const Services = () => {
             ))}
           </div>
         </div>
-
         <img
           src={cubeLeg}
           className="w-[300px] object-contain md:w-[500px] lg:w-[600px]"

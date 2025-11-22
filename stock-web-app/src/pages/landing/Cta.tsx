@@ -3,12 +3,11 @@ import { Button } from '@/components/ui/button';
 export const Cta = () => {
   return (
     <section id="cta" className="bg-muted/50 my-24 py-16 sm:my-32">
-      <div className="container place-items-center lg:grid lg:grid-cols-2">
+      <div className="container place-items-center px-5  justify-between lg:grid lg:grid-cols-2">
         <div className="lg:col-start-1">
           <h2 className="text-3xl font-bold md:text-4xl">
-            All Your
+            All Your{" "}
             <span className="from-primary/60 to-primary bg-gradient-to-b bg-clip-text text-transparent">
-              {' '}
               Ideas & Concepts{' '}
             </span>
             In One Interface
@@ -20,9 +19,9 @@ export const Cta = () => {
           </p>
         </div>
 
-        <div className="space-y-4 lg:col-start-2">
-          <Button className="w-full md:mr-4 md:w-auto">Request a Demo</Button>
-          <Button variant="outline" className="w-full md:w-auto">
+        <div className="space-y-4  w-full lg:col-start-2">
+          <Button size={'xl'} className="w-full md:mr-4 md:w-auto text-xl">Request a Demo</Button>
+          <Button size={'xl'}  variant="outline" className="w-full md:w-auto text-xl">
             View all features
           </Button>
         </div>

@@ -8,69 +8,69 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root';
-import { Route as AuthorRouteImport } from './routes/_author';
-import { Route as AuthRouteImport } from './routes/_auth';
-import { Route as IndexRouteImport } from './routes/index';
-import { Route as AuthorLoginRouteImport } from './routes/_author/login';
-import { Route as AuthInvoicesRouteImport } from './routes/_auth/invoices';
-import { Route as AuthDashboardRouteImport } from './routes/_auth/dashboard';
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as AuthorRouteImport } from './routes/_author'
+import { Route as AuthRouteImport } from './routes/_auth'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthorLoginRouteImport } from './routes/_author/login'
+import { Route as AuthInvoicesRouteImport } from './routes/_auth/invoices'
+import { Route as AuthDashboardRouteImport } from './routes/_auth/dashboard'
 
 const AuthorRoute = AuthorRouteImport.update({
   id: '/_author',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const AuthRoute = AuthRouteImport.update({
   id: '/_auth',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const AuthorLoginRoute = AuthorLoginRouteImport.update({
   id: '/login',
   path: '/login',
   getParentRoute: () => AuthorRoute,
-} as any);
+} as any)
 const AuthInvoicesRoute = AuthInvoicesRouteImport.update({
   id: '/invoices',
   path: '/invoices',
   getParentRoute: () => AuthRoute,
-} as any);
+} as any)
 const AuthDashboardRoute = AuthDashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
   getParentRoute: () => AuthRoute,
-} as any);
+} as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute;
-  '/dashboard': typeof AuthDashboardRoute;
-  '/invoices': typeof AuthInvoicesRoute;
-  '/login': typeof AuthorLoginRoute;
+  '/': typeof IndexRoute
+  '/dashboard': typeof AuthDashboardRoute
+  '/invoices': typeof AuthInvoicesRoute
+  '/login': typeof AuthorLoginRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute;
-  '/dashboard': typeof AuthDashboardRoute;
-  '/invoices': typeof AuthInvoicesRoute;
-  '/login': typeof AuthorLoginRoute;
+  '/': typeof IndexRoute
+  '/dashboard': typeof AuthDashboardRoute
+  '/invoices': typeof AuthInvoicesRoute
+  '/login': typeof AuthorLoginRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  '/': typeof IndexRoute;
-  '/_auth': typeof AuthRouteWithChildren;
-  '/_author': typeof AuthorRouteWithChildren;
-  '/_auth/dashboard': typeof AuthDashboardRoute;
-  '/_auth/invoices': typeof AuthInvoicesRoute;
-  '/_author/login': typeof AuthorLoginRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/_auth': typeof AuthRouteWithChildren
+  '/_author': typeof AuthorRouteWithChildren
+  '/_auth/dashboard': typeof AuthDashboardRoute
+  '/_auth/invoices': typeof AuthInvoicesRoute
+  '/_author/login': typeof AuthorLoginRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: '/' | '/dashboard' | '/invoices' | '/login';
-  fileRoutesByTo: FileRoutesByTo;
-  to: '/' | '/dashboard' | '/invoices' | '/login';
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/dashboard' | '/invoices' | '/login'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/dashboard' | '/invoices' | '/login'
   id:
     | '__root__'
     | '/'
@@ -78,90 +78,90 @@ export interface FileRouteTypes {
     | '/_author'
     | '/_auth/dashboard'
     | '/_auth/invoices'
-    | '/_author/login';
-  fileRoutesById: FileRoutesById;
+    | '/_author/login'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  AuthRoute: typeof AuthRouteWithChildren;
-  AuthorRoute: typeof AuthorRouteWithChildren;
+  IndexRoute: typeof IndexRoute
+  AuthRoute: typeof AuthRouteWithChildren
+  AuthorRoute: typeof AuthorRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/_author': {
-      id: '/_author';
-      path: '';
-      fullPath: '';
-      preLoaderRoute: typeof AuthorRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/_author'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof AuthorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_auth': {
-      id: '/_auth';
-      path: '';
-      fullPath: '';
-      preLoaderRoute: typeof AuthRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/_auth'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
-      id: '/';
-      path: '/';
-      fullPath: '/';
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_author/login': {
-      id: '/_author/login';
-      path: '/login';
-      fullPath: '/login';
-      preLoaderRoute: typeof AuthorLoginRouteImport;
-      parentRoute: typeof AuthorRoute;
-    };
+      id: '/_author/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof AuthorLoginRouteImport
+      parentRoute: typeof AuthorRoute
+    }
     '/_auth/invoices': {
-      id: '/_auth/invoices';
-      path: '/invoices';
-      fullPath: '/invoices';
-      preLoaderRoute: typeof AuthInvoicesRouteImport;
-      parentRoute: typeof AuthRoute;
-    };
+      id: '/_auth/invoices'
+      path: '/invoices'
+      fullPath: '/invoices'
+      preLoaderRoute: typeof AuthInvoicesRouteImport
+      parentRoute: typeof AuthRoute
+    }
     '/_auth/dashboard': {
-      id: '/_auth/dashboard';
-      path: '/dashboard';
-      fullPath: '/dashboard';
-      preLoaderRoute: typeof AuthDashboardRouteImport;
-      parentRoute: typeof AuthRoute;
-    };
+      id: '/_auth/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AuthDashboardRouteImport
+      parentRoute: typeof AuthRoute
+    }
   }
 }
 
 interface AuthRouteChildren {
-  AuthDashboardRoute: typeof AuthDashboardRoute;
-  AuthInvoicesRoute: typeof AuthInvoicesRoute;
+  AuthDashboardRoute: typeof AuthDashboardRoute
+  AuthInvoicesRoute: typeof AuthInvoicesRoute
 }
 
 const AuthRouteChildren: AuthRouteChildren = {
   AuthDashboardRoute: AuthDashboardRoute,
   AuthInvoicesRoute: AuthInvoicesRoute,
-};
+}
 
-const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren);
+const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
 
 interface AuthorRouteChildren {
-  AuthorLoginRoute: typeof AuthorLoginRoute;
+  AuthorLoginRoute: typeof AuthorLoginRoute
 }
 
 const AuthorRouteChildren: AuthorRouteChildren = {
   AuthorLoginRoute: AuthorLoginRoute,
-};
+}
 
 const AuthorRouteWithChildren =
-  AuthorRoute._addFileChildren(AuthorRouteChildren);
+  AuthorRoute._addFileChildren(AuthorRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthRoute: AuthRouteWithChildren,
   AuthorRoute: AuthorRouteWithChildren,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
